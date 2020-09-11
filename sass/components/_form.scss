@@ -1,0 +1,107 @@
+.form
+{
+
+    &Group:not(:last-child)
+    {
+         margin-bottom: 2rem;
+    }
+
+    &Input
+    {
+        font-size: 1.4rem;
+        background-color: rgba($color: $colorWhite, $alpha: .5);
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        color: black;
+        font-family: inherit;
+        color: inherit;
+        width: 90%;
+        border: none;
+        border-bottom: 3px solid transparent;
+        display: block;
+
+        &:focus
+        {
+            border-bottom: 3px solid $colorPrimary;
+            box-shadow: $lightShadow;
+            outline: none;
+        }
+
+        &::-webkit-input-placeholder
+        {
+            color: $colorGreyDark2;
+        }
+
+        &:invalid
+        {
+            border-bottom: 3px solid $colorSecondaryDark;
+        }
+
+    }
+
+    &InputLabel
+    {
+        margin-left: 2rem;
+        font-size: 1.2rem;
+        transition: all 0.3s;
+        display: block;
+    }
+
+    &Input:placeholder-shown + &Label
+    {
+        opacity: 0;
+        transform: translateY(-3.5rem);
+    }
+
+    &RadioGroup
+    {
+        width: 49%;
+        display: inline-block;
+    }
+
+    &RadioInput
+    {
+        display: none;
+    }
+
+    &RadioLabel
+    {
+        font-size: $defaultFontSize;
+        position: relative;
+        padding-left: 4rem;
+    }
+
+    &RadioSymbol
+    {
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        border: 5px solid $colorPrimary;
+        border-radius: 50%;
+        position: absolute;
+        top: -.5rem;
+        left: 0rem;
+
+        &::after
+        {
+            content: '';
+            width: 1.5rem;
+            height: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: $colorPrimary;
+            border-radius: 50%;
+            opacity: 0;
+            transition: $defaultTransition;
+        }
+    }
+
+    &RadioInput:checked ~ &RadioLabel &RadioSymbol::after
+    {
+        opacity: 1;
+    }
+
+
+}

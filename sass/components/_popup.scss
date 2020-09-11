@@ -1,0 +1,95 @@
+.popup
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    z-index: 5000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
+    &Content
+    {
+        @include absCenter;
+        width: 75%;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: $lightShadow;
+        display: table;
+        overflow: hidden;
+        transform: translate(-50%,-50%) scale(0);
+        opacity: 0;
+        transition: all 0.5s 0.2s;
+
+        &Left
+        {
+            width: 33.333%;
+            display: table-cell;
+            overflow: hidden;
+
+            &Image
+            {
+                display: block;
+                width: 120%;
+            }
+        }
+
+        &Right
+        {
+            width: 66.666%;
+            display: table-cell;
+            vertical-align: top;
+            padding: 5rem 3rem;
+            position: relative;
+
+            &Text
+            {
+                font-size: 1.4rem;
+
+                column-count: 2;
+                column-gap: 4rem;
+                column-rule: 1px solid $colorGreyDark3;
+
+                hyphens: auto;
+            }
+        }
+    }
+
+    &:target
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &Content
+    {
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    &Close
+    {
+        &:link,&:visited
+        {
+            font-size: 2rem;
+            text-decoration: none;
+            color: $colorGreyDark3;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            transition: all 0.2s;
+            line-height: 1;
+        }
+
+        &:hover
+        {
+            transform: scale(1.5);
+        }
+
+    }
+}

@@ -1,0 +1,314 @@
+.card
+{
+    height: 50rem;
+    position: relative;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &Side
+    {   
+        position: absolute;
+        height: 50rem;
+        width: 100%;
+        backface-visibility: hidden;
+        box-shadow: 0rem 2.5rem 4rem rgba($color: #000000, $alpha: .15);
+
+        &Front
+        {
+            animation: flipBackRightToLeft .5s both;
+        }
+
+        &Back
+        {
+            animation: flipFrontLeftToRight .5s both;
+
+            &1
+            {
+                background: linear-gradient(to right bottom , $colorSecondaryLight,$colorSecondaryDark);
+            }
+
+            &2
+            {
+                background : linear-gradient(to right bottom, $colorPrimaryLight , $colorPrimaryDark);
+            }
+
+            &3
+            {
+                background: linear-gradient(to right bottom , $colorTertiaryLight,$colorTertiaryDark);
+            }
+        }
+    }
+
+    &:hover &SideFront
+    {
+        animation: flipFrontLeftToRight .5s both;
+    }
+
+    &:hover &SideBack
+    {
+        animation: flipBackRightToLeft .5s both;
+    }
+
+    &Image
+    {
+        background-size: cover;
+        background-blend-mode: screen;
+        height: 23rem;
+        clip-path: polygon( 0 0 , 100% 0 , 100% 90% , 0 100%);
+
+        &1
+        {
+            background-image: linear-gradient(to right bottom , $colorSecondaryLight,$colorSecondaryDark),url('../../img/nat-5.jpg');
+        }
+
+        &2
+        {
+            background-image: linear-gradient(to right bottom , $colorPrimaryLight , $colorPrimaryDark),url('../../img/nat-6.jpg');
+        }
+
+        &3
+        {
+            background-image: linear-gradient(to right bottom , $colorTertiaryLight,$colorTertiaryDark),url('../../img/nat-7.jpg');
+        }
+    }
+
+    &Heading
+    {
+        color: white;
+        position: absolute;
+        top: 14rem;
+        right: 1rem;
+        padding: 0 10px;
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        width: 60%;
+        text-align: right;
+    }
+
+    &HeadingSpan
+    {  
+        padding: 0rem 1rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &1
+        {
+            background: linear-gradient(to right bottom , rgba($colorSecondaryLight,.85),rgba($colorSecondaryDark,.85));
+        }
+
+        &2
+        {
+            background: linear-gradient(to right bottom , rgba($colorPrimaryLight,.85),rgba($colorPrimaryDark,.85));
+        }
+
+        &3
+        {
+            background: linear-gradient(to right bottom , rgba($colorTertiaryLight,.85),rgba($colorTertiaryDark,.85));
+        }
+    }
+
+    &Details
+    {  
+        font-size: 1.6rem;
+
+        &List
+        {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+
+            &Item
+            {
+                padding: 1rem;
+                
+
+                &:not(:last-child)
+                {
+                    border-bottom: 1px solid $colorGreyLight2;
+                }
+            }
+        }
+    }
+
+    &Booking
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 80%;
+        text-align: center;
+
+        &Details
+        {
+            color: white;
+            text-align: center;
+
+            &Only
+            {
+                font-size: 3rem;
+                text-transform: uppercase;
+            }
+
+            &Price
+            {
+                font-size: 6rem;
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 56.25em) , only screen and (hover: none)
+{
+    .card
+    {
+        height: auto;
+        box-shadow: 0rem 2.5rem 4rem rgba($color: #000000, $alpha: .15);
+
+        &Side
+        {   
+            position: relative;
+            height: auto;
+            width: 100%;
+            backface-visibility: hidden;
+            box-shadow: none;
+
+            &Front
+            {
+                animation: none;
+            }
+
+            &Back
+            {
+                background-color: white;
+                animation: none;
+                clip-path: polygon(0% 15% , 100% 0% , 100% 100% , 0% 100%);
+
+            }
+        }
+
+        &:hover &SideFront
+        {
+            animation: none;
+        }
+
+        &:hover &SideBack
+        {
+            animation: none;
+        }
+
+        &Image
+        {
+            background-size: cover;
+            background-blend-mode: screen;
+            height: 23rem;
+            clip-path: polygon( 0 0 , 100% 0 , 100% 90% , 0 100%);
+
+            &1
+            {
+                background-image: linear-gradient(to right bottom , $colorSecondaryLight,$colorSecondaryDark),url('../../img/nat-5.jpg');
+            }
+
+            &2
+            {
+                background-image: linear-gradient(to right bottom , $colorPrimaryLight , $colorPrimaryDark),url('../../img/nat-6.jpg');
+            }
+
+            &3
+            {
+                background-image: linear-gradient(to right bottom , $colorTertiaryLight,$colorTertiaryDark),url('../../img/nat-7.jpg');
+            }
+        }
+
+        &Heading
+        {
+            color: white;
+            position: absolute;
+            top: 14rem;
+            right: 1rem;
+            padding: 0 10px;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            width: 60%;
+            text-align: right;
+        }
+
+        &HeadingSpan
+        {  
+            padding: 0rem 1rem;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+
+            &1
+            {
+                background: linear-gradient(to right bottom , rgba($colorSecondaryLight,.85),rgba($colorSecondaryDark,.85));
+            }
+
+            &2
+            {
+                background: linear-gradient(to right bottom , rgba($colorPrimaryLight,.85),rgba($colorPrimaryDark,.85));
+            }
+
+            &3
+            {
+                background: linear-gradient(to right bottom , rgba($colorTertiaryLight,.85),rgba($colorTertiaryDark,.85));
+            }
+        }
+
+        &Details
+        {  
+            font-size: 1.6rem;
+
+            &List
+            {
+                list-style: none;
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
+
+                &Item
+                {
+                    padding: 1rem;
+                    
+
+                    &:not(:last-child)
+                    {
+                        border-bottom: 1px solid $colorGreyLight2;
+                    }
+                }
+            }
+        }
+
+        &Booking
+        {
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(0%,0%);
+            width: 100%;
+            padding: 5rem 0rem;
+
+            &Details
+            {
+                color: white;
+                text-align: center;
+
+                &Only
+                {
+                    font-size: 3rem;
+                    text-transform: uppercase;
+                }
+
+                &Price
+                {
+                    font-size: 6rem;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,254 @@
+//Text Content
+
+.uCenterText
+{
+    text-align: center !important;
+}
+
+//Margins
+
+.uMarginTopSmall
+{
+    margin-top: 2rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-top: 1.5rem;
+    }
+}
+
+.uMarginTopMedium
+{
+    margin-top: 5rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-top: 4rem;
+    }
+}
+
+.uMarginTopBig
+{
+    margin-top: 8rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-top: 5rem;
+    }
+}
+
+.uMarginBottomSmall
+{
+    margin-bottom: 2rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-bottom: 1.5rem;
+    }
+}
+
+.uMarginBottomMedium
+{
+    margin-bottom: 5rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-bottom: 4rem;
+    }
+}
+
+
+.uMarginBottomBig
+{
+    margin-bottom: 8rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-bottom: 8rem;
+    }
+}
+
+.uMarginLeftSmall
+{
+    margin-left: 2rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-left: 1.5rem;
+    }
+}
+
+.uMarginLeftMedium
+{
+    margin-left: 5rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-left: 4rem;
+    }
+}
+
+
+.uMarginLeftBig
+{
+    margin-left: 8rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-left: 8rem;
+    }
+}
+
+.uMarginRightSmall
+{
+    margin-left: 2rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-right: 1.5rem;
+    }
+}
+
+.uMarginRightMedium
+{
+    margin-right: 5rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-right: 4rem;
+    }
+}
+
+.uMarginRightBig
+{
+    margin-right: 8rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-right: 8rem;
+    }
+}
+
+//Paddings
+
+.uPaddingTopSmall
+{
+    Padding-top: 2rem !important;
+
+    @include response(tabPort)
+    {   
+        padding-top: 1.5rem;
+    }
+}
+
+.uPaddingTopMedium
+{
+    Padding-top: 5rem !important;
+
+    @include response(tabPort)
+    {   
+        padding-top: 4rem;
+    }
+}
+
+.uPaddingTopBig
+{
+    Padding-Top: 8rem !important;
+
+    @include response(tabPort)
+    {   
+        padding-top: 8rem;
+    }
+}
+
+.uPaddingBottomSmall
+{
+    Padding-bottom: 2rem !important;
+
+    @include response(tabPort)
+    {   
+        padding-bottom: 1.5rem;
+    }
+}
+
+.uPaddingBottomMedium
+{
+    Padding-bottom: 5rem !important;
+
+    @include response(tabPort)
+    {   
+        padding-bottom: 4rem;
+    }
+}
+
+
+.uPaddingBottomBig
+{
+    Padding-bottom: 8rem !important;
+
+    @include response(tabPort)
+    {   
+        padding-bottom: 8rem;
+    }
+}
+
+.uPaddingLeftSmall
+{
+    Padding-left: 2rem !important;
+
+    @include response(tabPort)
+    {   
+        padding-left: 1.5rem;
+    }
+}
+
+.uPaddingLeftMedium
+{
+    Padding-left: 5rem !important;
+
+    @include response(tabPort)
+    {   
+        padding-left: 4rem;
+    }
+}
+
+
+.uPaddingLeftBig
+{
+    Padding-bottom: 8rem !important;
+
+    @include response(tabPort)
+    {   
+        margin-bottom: 8rem;
+    }
+}
+
+.uPaddingRightSmall
+{
+    Padding-right: 2rem !important;
+
+    @include response(tabPort)
+    {   
+        padding-right: 1.5rem;
+    }
+}
+
+.uPaddingRightMedium
+{
+    padding-right: 5rem !important;
+
+    @include response(tabPort)
+    {   
+        padding-right: 4rem;
+    }
+}
+
+.uPaddingRightBig
+{
+    padding-right: 8rem !important;
+
+    @include response(tabPort)
+    {   
+        padding-right: 8rem;
+    }
+}

@@ -1,0 +1,46 @@
+//COLORS
+
+$colorPrimary : #55c57a;
+$colorPrimaryLight : #7ed56f;
+$colorPrimaryDark : #28b485;
+
+$colorSecondaryLight : #ffb900;
+$colorSecondaryDark : #ff7730;
+
+$colorTertiaryLight : #2998ff;
+$colorTertiaryDark : #5643fa;
+
+$colorWhite : #fff;
+$colorBlack : #000;
+
+$colorGreyLight1 : #f7f7f7;
+$colorGreyLight2 : #eee;
+
+$colorGreyDark : #777;
+$colorGreyDark2 : #999;
+$colorGreyDark3 : #333;
+
+//GRID
+
+$gridLength : 114rem;
+$gridLengthMedium : 60rem;
+$gridLengthSmall : 20rem;
+
+
+$gutterVertical : 8rem;
+$gutterVerticalSmall : 6rem; 
+
+$gutterHorizontal : 6rem;
+
+//SHADOWS
+
+$lightShadow : 0rem 1.5rem 4rem rgba($colorBlack,.2);
+
+
+//FontSize
+
+$defaultFontSize : 1.6rem;
+
+//Transition
+
+$defaultTransition : all .3s

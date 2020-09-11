@@ -1,0 +1,78 @@
+.sectionAbout
+{
+    background-color: $colorGreyLight1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+
+    @include response(tabPort)
+    {
+        padding: 20rem 0;
+    }
+}
+
+.sectionFeatures
+{
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom,rgba($colorPrimaryLight, 0.705),rgba($colorPrimaryDark, 0.705)) , url('../img/nat-4.jpg');
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    & > * 
+    {
+        transform: skewY(7deg);
+    }
+
+    @include response(tabPort)
+    {
+        padding: 15rem 0;
+    }
+}
+
+.sectionTours
+{
+    margin-top: -10rem;
+    padding: 20rem 0 5rem 0;
+    background-color: $colorGreyLight1;
+
+    @include response(tabPort)
+    {
+        padding: 15rem 0 2rem 0;
+    }
+}
+
+.sectionStories
+{
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.bookingSection
+{
+    background: linear-gradient(to right bottom , rgba($colorPrimaryLight, 0.705),rgba($colorPrimaryDark, 0.705));
+    padding: 15rem 0;
+}
+
+.booking
+{   
+    height: 50rem;
+    background-image: linear-gradient(105deg , rgba($colorWhite,.9) 0% , rgba($colorWhite,.8) 50%, transparent 50%) , url('../../img/nat-10.jpg');
+    background-size: cover;
+    box-shadow: $lightShadow;
+    border-radius: 5px;
+    padding: 5rem;
+
+    @include response(tabPort)
+    {
+        background-image: linear-gradient(105deg , rgba($colorWhite,.9) 0% , rgba($colorWhite,.8) 100% ), url('../../img/nat-10.jpg');
+    }
+
+    &Form
+    {
+        width: 50%;
+
+        @include response(tabPort)
+        {
+            width: 100%;
+        }
+    }
+}

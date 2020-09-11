@@ -1,0 +1,54 @@
+* , *::after , *::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html
+{
+    font-size: 62.5%; // 10/16 px % = 62.5
+
+    @include response(bigScreen)
+    {
+        font-size: 75%; // 12/16 px %= 80
+    }
+    
+    @include response(tabLand)
+    {
+        font-size: 56.25%; // 9/16 px % = 56.25
+    }
+    
+    @include response(tabPort)
+    {
+        font-size: 50%; // 8/16 px %= 50
+    }
+
+    @include response(phone)
+    {
+        font-size: 40%; // 6.4/16 px %= 40
+    }
+}
+
+body 
+{
+    font-family: 'lato' , sans-serif;
+    font-weight: 400px;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $colorGreyDark;
+    padding: 3rem;
+    box-sizing: border-box;
+
+    @include response(tabPort)
+    {
+        padding: 0rem;
+    }
+
+}
+
+::selection
+{
+    background-color: $colorPrimary;
+    color: white;
+}

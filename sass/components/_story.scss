@@ -1,0 +1,80 @@
+.story
+{
+    width: 75%;
+    margin: 5rem auto;
+    background-color: rgba($color: $colorGreyLight1, $alpha: .70);
+    padding: 3rem 6rem; 
+    clip-path: polygon(10% 0, 100% 0 , 90% 100% , 0 100%);
+
+    @include response(tabPort)
+    {
+        width: 100%;
+        clip-path: none;
+    }
+
+    &Picture
+    {
+        width: 15rem;
+        height: 15rem;
+        margin: 1rem;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @supports(clip-path: circle()) or (-webkit-clip-path : circle())
+        {
+            -webkit-shape-outside: circle(48% at 50% 50%);
+            shape-outside: circle(48% at 50% 50%);
+            -webkit-clip-path: circle(45% at 50% 50%);
+            clip-path: circle(45% at 50% 50%);
+            transform: translateX(-3px);
+            border-radius: none;
+        }
+
+        &Image
+        {
+            transform: scale(1.4);
+            height: 100%;
+            transition: all 0.3s;
+        }
+    }  
+
+    &Text
+    {
+
+        &Detail
+        {
+            font-size: 1.6rem;
+        }
+    }
+
+    &Caption
+    {
+        position: absolute;
+        top : 50%;
+        left: 50%;
+        transform: translate(-50%,20%);
+        font-size: 1.7rem;
+        text-align: center;
+        color: $colorWhite;
+        opacity: 0;
+        transition: all 0.3s;
+        backface-visibility: hidden;
+
+    }
+
+    &:hover &PictureImage
+    {
+        transform: scale(1);
+        filter : blur(3px) brightness(80%)
+    }
+
+    &:hover &Caption
+    {
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+
+
+}

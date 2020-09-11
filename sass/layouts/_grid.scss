@@ -1,0 +1,80 @@
+.rows
+{
+    max-width: $gridLength;
+    margin: 0 auto;
+    color: black;
+
+    &:not(:last-child)
+    {
+        margin-bottom: $gutterVertical;
+
+        @include response(tabPort)
+        {
+            margin-bottom: $gutterVerticalSmall;
+        }
+    }
+
+    @include response(tabPort)
+    {
+        max-width: $gridLengthMedium;
+    }
+
+    @include response(phone)
+    {
+        max-width: 80%;
+    }
+
+    @include clearFix;
+
+    [class^='col-']
+    {
+        float: left;
+
+        &:not(:last-child)
+        {
+            margin-right: $gutterHorizontal;
+
+            @include response(tabPort)
+            {
+                margin-right: 0;
+                margin-bottom: $gutterVerticalSmall;
+            }
+        }
+
+        @include response(tabPort)
+        {
+            width: 100% !important;
+        }
+    }
+
+    .col-1-of-2
+    {
+        width: calc((100% - #{$gutterHorizontal})/2);
+    }
+
+    .col-1-of-3
+    {
+        width: calc((100% - 2* #{$gutterHorizontal})/3);
+    }
+
+    .col-2-of-3
+    {
+        width: calc((2*(100% - 2* #{$gutterHorizontal})/3) + #{$gutterHorizontal});
+    }
+
+    .col-1-of-4
+    {
+        width : calc((100% - 3 * #{$gutterHorizontal})/4);
+    }
+
+    .col-2-of-4
+    {
+        width : calc((2* (100% - 3*  #{$gutterHorizontal})/4) + #{$gutterHorizontal});
+    }
+
+    .col-3-of-4
+    {
+        width : calc((3* (100% - 3*  #{$gutterHorizontal})/4) + (2 *#{$gutterHorizontal}));
+    }
+
+}

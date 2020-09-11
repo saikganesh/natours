@@ -1,0 +1,93 @@
+.footer
+{
+
+    background: $colorGreyDark3;
+    padding: 10rem 15rem;
+    font-size: 1.2rem;
+    color: $colorGreyDark;
+
+    @include response(tabPort)
+    {
+        padding: 5rem 8rem;
+    }
+
+    &Logo
+    {
+        text-align: center;
+
+        &Content
+        {
+            width: 150px;
+            height: auto;
+        }
+    }
+
+    &Navigation
+    {
+        display: inline-block;
+        border-top: 2px solid $colorGreyDark2;
+
+        @include response(tabPort)
+        {
+            width: 100%;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    &List
+    {
+
+        list-style: none;
+
+        &Item
+        {
+            display: inline-block;
+
+            &:not(:last-child)
+            {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    &Link
+    {
+        &:link,&:visited
+        {
+            display: inline-block;
+            color: $colorGreyLight1;
+            text-decoration: none;
+            padding: .5rem;
+            transition: $defaultTransition;
+            background: $colorGreyDark3;
+        }
+
+        &:hover
+        {
+            box-shadow: 0rem 1rem 2rem $colorBlack;
+            color: $colorPrimary;
+            transform: rotate(5deg) scale(1.3);
+        }
+
+    }
+
+    &CopyRight
+    {
+        display: inline-block;
+        border-top: 2px solid $colorGreyDark2;
+
+        @include response(tabPort)
+        {
+            width: 100%;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        &Text
+        {
+            color: inherit;
+        }
+    }
+
+}
